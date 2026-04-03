@@ -6,7 +6,7 @@
 
 **Gym Logger** is a minimal, mobile-first Progressive Web App (PWA) designed for speed and efficiency in the weight room. Built with the latest technical stack, it focuses on reducing friction so you can focus on your sets.
 
-![Gym Logger Mockup](./public/mockup.png)
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/9db5d89d-5b8c-4bfe-a7fd-509ed45cfde2" />
 
 ## 🎯 Key Features
 
