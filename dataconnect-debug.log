@@ -12,3 +12,22 @@ E0403 20:45:06.824606   21156 installsdk.go:88] Failed to install package: exec:
 I0403 20:45:06.824606   21156 load.go:109] Finished reloading
 I0403 20:45:06.826681   21156 dev.go:104] Listening on address (HTTP + gRPC): 127.0.0.1:9399
 I0403 20:45:06.827480   21156 dev.go:104] Listening on address (HTTP + gRPC): [::1]:9399
+I0403 20:45:11.694117   21156 migrate.go:24] Running migration SQL:
+Step 1: CREATE EXTENSION IF NOT EXISTS "uuid-ossp"
+Step 2: CREATE TABLE "public"."movie" ("id" uuid NOT NULL DEFAULT uuid_generate_v4(), "genre" text NULL, "image_url" text NOT NULL, "title" text NOT NULL, PRIMARY KEY ("id"))
+Step 3: CREATE TABLE "public"."user" ("id" text NOT NULL, "username" character varying(50) NOT NULL, PRIMARY KEY ("id"))
+Step 4: CREATE TABLE "public"."Reviews" ("movie_id" uuid NOT NULL, "user_id" text NOT NULL, "rating" integer NULL, "review_date" date NOT NULL, "review_text" text NULL, PRIMARY KEY ("movie_id", "user_id"), CONSTRAINT "Reviews_movie_id_fkey" FOREIGN KEY ("movie_id") REFERENCES "public"."movie" ("id") ON DELETE CASCADE, CONSTRAINT "Reviews_user_id_fkey" FOREIGN KEY ("user_id") REFERENCES "public"."user" ("id") ON DELETE CASCADE)
+Step 5: CREATE INDEX "Reviews_movieId_idx" ON "public"."Reviews" ("movie_id")
+Step 6: CREATE INDEX "Reviews_userId_idx" ON "public"."Reviews" ("user_id")
+Step 7: CREATE TABLE "public"."movie_metadata" ("id" uuid NOT NULL DEFAULT uuid_generate_v4(), "movie_id" uuid NOT NULL, "description" text NULL, "rating" double precision NULL, "release_year" integer NULL, PRIMARY KEY ("id"), CONSTRAINT "movie_metadata_movie_id_fkey" FOREIGN KEY ("movie_id") REFERENCES "public"."movie" ("id") ON DELETE CASCADE)
+Step 8: CREATE INDEX "movie_metadata_movieId_idx" ON "public"."movie_metadata" ("movie_id")
+Step 9: CREATE UNIQUE INDEX "movie_metadata_movieId_uidx" ON "public"."movie_metadata" ("movie_id")
+I0403 20:45:11.844733   21156 control.go:100] [projects/emulator/locations/emulator/services/gymlogger 3e45] UpdateResources(): done
+Main schema: sources: schema\schema.gql [1992B] 
+Connector "example": sources: example\mutations.gql [1243B] example\queries.gql [1801B] 
+I0403 20:45:11.849700   21156 configure_emulator.go:21] ConfigureEmulator successed
+Request: service_id:  "gymlogger"
+connection_string:  "postgres://127.0.0.1:5432/fdcdb?sslmode=disable"
+database:  "fdcdb"
+
+Response: 
