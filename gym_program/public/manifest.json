@@ -1,0 +1,16 @@
+{
+  "name": "Gym Logger",
+  "short_name": "GymLogger",
+  "description": "Minimal, mobile-first gym logging app.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#09090b",
+  "theme_color": "#09090b",
+  "icons": [
+    {
+      "src": "/mockup.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

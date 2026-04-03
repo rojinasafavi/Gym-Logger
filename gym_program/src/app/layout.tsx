@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -12,9 +12,18 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const viewport: Viewport = {
+  themeColor: "#09090b",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
+
 export const metadata: Metadata = {
-  title: "Gym Logger",
-  description: "A minimal, mobile-first gym logging app to track your progress.",
+  title: "Gym Logger | Push Your Limits",
+  description: "Minimal, mobile-first gym logging app to track your progress.",
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({
