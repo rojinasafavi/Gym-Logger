@@ -51,3 +51,39 @@ I0403 20:48:50.229016   36476 load.go:109] Finished reloading
  {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0403 20:48:50.229855   36476 dev.go:104] Listening on address (HTTP + gRPC): 127.0.0.1:9399\n"}}
 [debug] [2026-04-03T17:48:50.229Z] I0403 20:48:50.230947   36476 dev.go:104] Listening on address (HTTP + gRPC): [::1]:9399
  {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0403 20:48:50.230947   36476 dev.go:104] Listening on address (HTTP + gRPC): [::1]:9399\n"}}
+[debug] [2026-04-03T17:48:52.151Z] [Data Connect] Connecting to postgres://127.0.0.1:5432/fdcdb?sslmode=disable}...
+[debug] [2026-04-03T17:48:52.151Z] >>> [apiv2][query] POST http://127.0.0.1:9399/emulator/configure [none]
+[debug] [2026-04-03T17:48:52.151Z] >>> [apiv2][body] POST http://127.0.0.1:9399/emulator/configure {"connectionString":"postgres://127.0.0.1:5432/fdcdb?sslmode=disable","database":"fdcdb","serviceId":"gymlogger"}
+[debug] [2026-04-03T17:48:52.870Z] I0403 20:48:52.872114   36476 control.go:100] [projects/emulator/locations/emulator/services/gymlogger cdee] UpdateResources(): done
+Main schema: sources: schema\schema.gql [1992B] 
+Connector "example": sources: example\mutations.gql [1243B] example\queries.gql [1801B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0403 20:48:52.872114   36476 control.go:100] [projects/emulator/locations/emulator/services/gymlogger cdee] UpdateResources(): done\nMain schema: sources: schema\\schema.gql [1992B] \nConnector \"example\": sources: example\\mutations.gql [1243B] example\\queries.gql [1801B] \n"}}
+[debug] [2026-04-03T17:48:52.879Z] I0403 20:48:52.881446   36476 configure_emulator.go:21] ConfigureEmulator successed
+Request: service_id:  "gymlogger"
+connection_string:  "postgres://127.0.0.1:5432/fdcdb?sslmode=disable"
+database:  "fdcdb"
+
+Response: 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0403 20:48:52.881446   36476 configure_emulator.go:21] ConfigureEmulator successed\nRequest: service_id:  \"gymlogger\"\nconnection_string:  \"postgres://127.0.0.1:5432/fdcdb?sslmode=disable\"\ndatabase:  \"fdcdb\"\n\nResponse: \n"}}
+[debug] [2026-04-03T17:48:52.883Z] <<< [apiv2][status] POST http://127.0.0.1:9399/emulator/configure 200
+[debug] [2026-04-03T17:48:52.883Z] <<< [apiv2][body] POST http://127.0.0.1:9399/emulator/configure {}
+[debug] [2026-04-03T17:48:52.883Z] [Data Connect] Successfully connected to postgres://127.0.0.1:5432/fdcdb?sslmode=disable}
+[warn] !  emulators: The Emulator UI is not starting because none of the running emulators have a UI component. {"metadata":{"emulator":{"name":"hub"},"message":"The Emulator UI is not starting because none of the running emulators have a UI component."}}
+[debug] [2026-04-03T17:48:52.889Z] >>> [apiv2][query] GET http://127.0.0.1:9399/emulator/info [none]
+[debug] [2026-04-03T17:48:52.893Z] <<< [apiv2][status] GET http://127.0.0.1:9399/emulator/info 200
+[debug] [2026-04-03T17:48:52.893Z] <<< [apiv2][body] GET http://127.0.0.1:9399/emulator/info {"version":"","services":[{"serviceId":"gymlogger","connectionString":"dbname='fdcdb' host='127.0.0.1' port='5432' sslmode='disable' dbname='fdcdb'"}]}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+└─────────────────────────────────────────────────────────────┘
+
+┌──────────────┬────────────────┐
+│ Emulator     │ Host:Port      │
+├──────────────┼────────────────┤
+│ Data Connect │ 127.0.0.1:9399 │
+└──────────────┴────────────────┘
+  Emulator Hub host: 127.0.0.1 port: 4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 

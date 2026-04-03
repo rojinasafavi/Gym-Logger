@@ -12,3 +12,12 @@ E0403 20:48:50.229016   36476 installsdk.go:88] Failed to install package: exec:
 I0403 20:48:50.229016   36476 load.go:109] Finished reloading
 I0403 20:48:50.229855   36476 dev.go:104] Listening on address (HTTP + gRPC): 127.0.0.1:9399
 I0403 20:48:50.230947   36476 dev.go:104] Listening on address (HTTP + gRPC): [::1]:9399
+I0403 20:48:52.872114   36476 control.go:100] [projects/emulator/locations/emulator/services/gymlogger cdee] UpdateResources(): done
+Main schema: sources: schema\schema.gql [1992B] 
+Connector "example": sources: example\mutations.gql [1243B] example\queries.gql [1801B] 
+I0403 20:48:52.881446   36476 configure_emulator.go:21] ConfigureEmulator successed
+Request: service_id:  "gymlogger"
+connection_string:  "postgres://127.0.0.1:5432/fdcdb?sslmode=disable"
+database:  "fdcdb"
+
+Response: 
