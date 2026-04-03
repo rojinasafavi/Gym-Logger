@@ -1,0 +1,99 @@
+[debug] [2026-04-03T17:45:05.459Z] ----------------------------------------------------------------------
+[debug] [2026-04-03T17:45:05.462Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\rojin\AppData\Local\npm-cache\_npx\ba4f1959e38407b5\node_modules\firebase-tools\lib\bin\firebase.js emulators:start --project demo-no-project
+[debug] [2026-04-03T17:45:05.462Z] CLI Version:   15.13.0
+[debug] [2026-04-03T17:45:05.462Z] Platform:      win32
+[debug] [2026-04-03T17:45:05.462Z] Node Version:  v24.14.0
+[debug] [2026-04-03T17:45:05.462Z] Time:          Fri Apr 03 2026 20:45:05 GMT+0300 (Eastern European Summer Time)
+[debug] [2026-04-03T17:45:05.463Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  emulators: Starting emulators: dataconnect {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: dataconnect"}}
+[info] i  emulators: Detected demo project ID "demo-no-project", emulated services will use a demo configuration and attempts to access non-emulated services for this project will fail. {"metadata":{"emulator":{"name":"hub"},"message":"Detected demo project ID \"demo-no-project\", emulated services will use a demo configuration and attempts to access non-emulated services for this project will fail."}}
+[debug] [2026-04-03T17:45:06.594Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-04-03T17:45:06.594Z] [dataconnect.postgres] postgres server for dataconnect only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-04-03T17:45:06.594Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"dataconnect":[{"address":"127.0.0.1","family":"IPv4","port":9399},{"address":"::1","family":"IPv6","port":9399}],"dataconnect.postgres":[{"address":"127.0.0.1","family":"IPv4","port":5432}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2026-04-03T17:45:06.596Z] Write emulator hub locator at C:\Users\rojin\AppData\Local\Temp\hub-demo-no-project.json
+[debug] [2026-04-03T17:45:06.603Z] defaultcredentials: writing to file C:\Users\rojin\AppData\Roaming\firebase\rojina_safavi39_gmail.com_application_default_credentials.json
+[debug] [2026-04-03T17:45:06.702Z] I0403 20:45:06.696908   25324 control.go:100] [projects/emulator/locations/emulator/services/gymlogger 8bdf] UpdateResources(): done
+Main schema: sources: schema\schema.gql [1992B] 
+Connector "example": sources: example\mutations.gql [1243B] example\queries.gql [1801B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0403 20:45:06.696908   25324 control.go:100] [projects/emulator/locations/emulator/services/gymlogger 8bdf] UpdateResources(): done\nMain schema: sources: schema\\schema.gql [1992B] \nConnector \"example\": sources: example\\mutations.gql [1243B] example\\queries.gql [1801B] \n"}}
+[debug] [2026-04-03T17:45:06.703Z] defaultcredentials: writing to file C:\Users\rojin\AppData\Roaming\firebase\rojina_safavi39_gmail.com_application_default_credentials.json
+[debug] [2026-04-03T17:45:06.705Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"dataconnect"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2026-04-03T17:45:06.705Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"dataconnect"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2026-04-03T17:45:06.705Z] Starting Data Connect Emulator with command {"binary":"C:\\Users\\rojin\\.cache\\firebase\\emulators\\dataconnect-emulator-3.3.1.exe","args":["--logtostderr","-v=2","dev","--listen=127.0.0.1:9399,[::1]:9399","--config_dir=C:\\Users\\rojin\\Desktop\\ai train\\Gym Logger\\dataconnect","--enable_output_schema_extensions=true","--enable_output_generated_sdk=true"],"optionalArgs":["listen","config_dir","enable_output_schema_extensions","enable_output_generated_sdk"],"joinArgs":true,"shell":false,"port":9399} {"metadata":{"emulator":{"name":"dataconnect"},"message":"Starting Data Connect Emulator with command {\"binary\":\"C:\\\\Users\\\\rojin\\\\.cache\\\\firebase\\\\emulators\\\\dataconnect-emulator-3.3.1.exe\",\"args\":[\"--logtostderr\",\"-v=2\",\"dev\",\"--listen=127.0.0.1:9399,[::1]:9399\",\"--config_dir=C:\\\\Users\\\\rojin\\\\Desktop\\\\ai train\\\\Gym Logger\\\\dataconnect\",\"--enable_output_schema_extensions=true\",\"--enable_output_generated_sdk=true\"],\"optionalArgs\":[\"listen\",\"config_dir\",\"enable_output_schema_extensions\",\"enable_output_generated_sdk\"],\"joinArgs\":true,\"shell\":false,\"port\":9399}"}}
+[info] i  dataconnect: Data Connect Emulator logging to dataconnect-debug.log {"metadata":{"emulator":{"name":"dataconnect"},"message":"Data Connect Emulator logging to \u001b[1mdataconnect-debug.log\u001b[22m"}}
+[info] i  dataconnect: Started up Postgres server, listening on {"address":"127.0.0.1","family":"IPv4","port":5432} {"metadata":{"emulator":{"name":"dataconnect"},"message":"Started up Postgres server, listening on {\"address\":\"127.0.0.1\",\"family\":\"IPv4\",\"port\":5432}"}}
+[debug] [2026-04-03T17:45:06.730Z] [Data Connect] Connecting to postgres://127.0.0.1:5432/fdcdb?sslmode=disable}...
+[debug] [2026-04-03T17:45:06.732Z] >>> [apiv2][query] POST http://127.0.0.1:9399/emulator/configure [none]
+[debug] [2026-04-03T17:45:06.732Z] >>> [apiv2][body] POST http://127.0.0.1:9399/emulator/configure {"connectionString":"postgres://127.0.0.1:5432/fdcdb?sslmode=disable","database":"fdcdb","serviceId":"gymlogger"}
+[debug] [2026-04-03T17:45:06.738Z] *** [apiv2] error from fetch(http://127.0.0.1:9399/emulator/configure, {"headers":{},"method":"POST","body":"{\"connectionString\":\"postgres://127.0.0.1:5432/fdcdb?sslmode=disable\",\"database\":\"fdcdb\",\"serviceId\":\"gymlogger\"}"}): FetchError: request to http://127.0.0.1:9399/emulator/configure failed, reason: connect ECONNREFUSED 127.0.0.1:9399
+[debug] [2026-04-03T17:45:06.738Z] [Data Connect] Retrying connectToPostgress call (1 of 3 attempts): FirebaseError: Data Connect emulator: undefined
+[debug] [2026-04-03T17:45:06.761Z] I0403 20:45:06.765880   21156 load.go:31] Reloading schema and connectors...
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0403 20:45:06.765880   21156 load.go:31] Reloading schema and connectors...\n"}}
+[debug] [2026-04-03T17:45:06.776Z] I0403 20:45:06.781180   21156 control.go:100] [projects/emulator/locations/emulator/services/gymlogger d5ba] UpdateResources(): done
+Main schema: sources: schema\schema.gql [1992B] 
+Connector "example": sources: example\queries.gql [1801B] example\mutations.gql [1243B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0403 20:45:06.781180   21156 control.go:100] [projects/emulator/locations/emulator/services/gymlogger d5ba] UpdateResources(): done\nMain schema: sources: schema\\schema.gql [1992B] \nConnector \"example\": sources: example\\queries.gql [1801B] example\\mutations.gql [1243B] \n"}}
+[debug] [2026-04-03T17:45:06.793Z] I0403 20:45:06.798477   21156 codegen.go:101] [connector "example" javascriptSdk] Generating sources into "C:\\Users\\rojin\\Desktop\\ai train\\Gym Logger\\gym_program\\src\\dataconnect-generated"
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0403 20:45:06.798477   21156 codegen.go:101] [connector \"example\" javascriptSdk] Generating sources into \"C:\\\\Users\\\\rojin\\\\Desktop\\\\ai train\\\\Gym Logger\\\\gym_program\\\\src\\\\dataconnect-generated\"\n"}}
+[debug] [2026-04-03T17:45:06.804Z] I0403 20:45:06.809013   21156 collector.go:107] schema extensions wrote into "C:\\Users\\rojin\\Desktop\\ai train\\Gym Logger\\dataconnect\\.dataconnect\\schema"
+Generated sources: main\relation.gql [14318B] main\query.gql [5099B] main\mutation.gql [13679B] prelude.gql [80888B] main\implicit.gql [1261B] main\input.gql [28927B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0403 20:45:06.809013   21156 collector.go:107] schema extensions wrote into \"C:\\\\Users\\\\rojin\\\\Desktop\\\\ai train\\\\Gym Logger\\\\dataconnect\\\\.dataconnect\\\\schema\"\nGenerated sources: main\\relation.gql [14318B] main\\query.gql [5099B] main\\mutation.gql [13679B] prelude.gql [80888B] main\\implicit.gql [1261B] main\\input.gql [28927B] \n"}}
+[debug] [2026-04-03T17:45:06.813Z] I0403 20:45:06.817983   21156 collector.go:107] connector "example" javascriptSdk wrote into "C:\\Users\\rojin\\Desktop\\ai train\\Gym Logger\\gym_program\\src\\dataconnect-generated"
+Generated sources: react\README.md [48299B] .guides/usage.md [3489B] react\index.cjs.js [3439B] .guides/setup.md [1682B] index.d.ts [8350B] index.cjs.js [5634B] react\index.d.ts [3961B] react\package.json [460B] react\esm\package.json [17B] .guides/config.json [236B] esm\index.esm.js [5134B] esm\package.json [17B] package.json [853B] README.md [41235B] react\esm\index.esm.js [3269B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0403 20:45:06.817983   21156 collector.go:107] connector \"example\" javascriptSdk wrote into \"C:\\\\Users\\\\rojin\\\\Desktop\\\\ai train\\\\Gym Logger\\\\gym_program\\\\src\\\\dataconnect-generated\"\nGenerated sources: react\\README.md [48299B] .guides/usage.md [3489B] react\\index.cjs.js [3439B] .guides/setup.md [1682B] index.d.ts [8350B] index.cjs.js [5634B] react\\index.d.ts [3961B] react\\package.json [460B] react\\esm\\package.json [17B] .guides/config.json [236B] esm\\index.esm.js [5134B] esm\\package.json [17B] package.json [853B] README.md [41235B] react\\esm\\index.esm.js [3269B] \n"}}
+[debug] [2026-04-03T17:45:06.819Z] I0403 20:45:06.824606   21156 installsdk.go:86] Running command: pnpm link src\dataconnect-generated
+E0403 20:45:06.824606   21156 installsdk.go:88] Failed to install package: exec: "pnpm": executable file not found in %PATH%
+I0403 20:45:06.824606   21156 load.go:109] Finished reloading
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0403 20:45:06.824606   21156 installsdk.go:86] Running command: pnpm link src\\dataconnect-generated\nE0403 20:45:06.824606   21156 installsdk.go:88] Failed to install package: exec: \"pnpm\": executable file not found in %PATH%\nI0403 20:45:06.824606   21156 load.go:109] Finished reloading\n"}}
+[debug] [2026-04-03T17:45:06.821Z] I0403 20:45:06.826681   21156 dev.go:104] Listening on address (HTTP + gRPC): 127.0.0.1:9399
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0403 20:45:06.826681   21156 dev.go:104] Listening on address (HTTP + gRPC): 127.0.0.1:9399\n"}}
+[debug] [2026-04-03T17:45:06.822Z] I0403 20:45:06.827480   21156 dev.go:104] Listening on address (HTTP + gRPC): [::1]:9399
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0403 20:45:06.827480   21156 dev.go:104] Listening on address (HTTP + gRPC): [::1]:9399\n"}}
+[debug] [2026-04-03T17:45:08.741Z] [Data Connect] Connecting to postgres://127.0.0.1:5432/fdcdb?sslmode=disable}...
+[debug] [2026-04-03T17:45:08.742Z] >>> [apiv2][query] POST http://127.0.0.1:9399/emulator/configure [none]
+[debug] [2026-04-03T17:45:08.742Z] >>> [apiv2][body] POST http://127.0.0.1:9399/emulator/configure {"connectionString":"postgres://127.0.0.1:5432/fdcdb?sslmode=disable","database":"fdcdb","serviceId":"gymlogger"}
+[debug] [2026-04-03T17:45:11.689Z] I0403 20:45:11.694117   21156 migrate.go:24] Running migration SQL:
+Step 1: CREATE EXTENSION IF NOT EXISTS "uuid-ossp"
+Step 2: CREATE TABLE "public"."movie" ("id" uuid NOT NULL DEFAULT uuid_generate_v4(), "genre" text NULL, "image_url" text NOT NULL, "title" text NOT NULL, PRIMARY KEY ("id"))
+Step 3: CREATE TABLE "public"."user" ("id" text NOT NULL, "username" character varying(50) NOT NULL, PRIMARY KEY ("id"))
+Step 4: CREATE TABLE "public"."Reviews" ("movie_id" uuid NOT NULL, "user_id" text NOT NULL, "rating" integer NULL, "review_date" date NOT NULL, "review_text" text NULL, PRIMARY KEY ("movie_id", "user_id"), CONSTRAINT "Reviews_movie_id_fkey" FOREIGN KEY ("movie_id") REFERENCES "public"."movie" ("id") ON DELETE CASCADE, CONSTRAINT "Reviews_user_id_fkey" FOREIGN KEY ("user_id") REFERENCES "public"."user" ("id") ON DELETE CASCADE)
+Step 5: CREATE INDEX "Reviews_movieId_idx" ON "public"."Reviews" ("movie_id")
+Step 6: CREATE INDEX "Reviews_userId_idx" ON "public"."Reviews" ("user_id")
+Step 7: CREATE TABLE "public"."movie_metadata" ("id" uuid NOT NULL DEFAULT uuid_generate_v4(), "movie_id" uuid NOT NULL, "description" text NULL, "rating" double precision NULL, "release_year" integer NULL, PRIMARY KEY ("id"), CONSTRAINT "movie_metadata_movie_id_fkey" FOREIGN KEY ("movie_id") REFERENCES "public"."movie" ("id") ON DELETE CASCADE)
+Step 8: CREATE INDEX "movie_metadata_movieId_idx" ON "public"."movie_metadata" ("movie_id")
+Step 9: CREATE UNIQUE INDEX "movie_metadata_movieId_uidx" ON "public"."movie_metadata" ("movie_id")
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0403 20:45:11.694117   21156 migrate.go:24] Running migration SQL:\nStep 1: CREATE EXTENSION IF NOT EXISTS \"uuid-ossp\"\nStep 2: CREATE TABLE \"public\".\"movie\" (\"id\" uuid NOT NULL DEFAULT uuid_generate_v4(), \"genre\" text NULL, \"image_url\" text NOT NULL, \"title\" text NOT NULL, PRIMARY KEY (\"id\"))\nStep 3: CREATE TABLE \"public\".\"user\" (\"id\" text NOT NULL, \"username\" character varying(50) NOT NULL, PRIMARY KEY (\"id\"))\nStep 4: CREATE TABLE \"public\".\"Reviews\" (\"movie_id\" uuid NOT NULL, \"user_id\" text NOT NULL, \"rating\" integer NULL, \"review_date\" date NOT NULL, \"review_text\" text NULL, PRIMARY KEY (\"movie_id\", \"user_id\"), CONSTRAINT \"Reviews_movie_id_fkey\" FOREIGN KEY (\"movie_id\") REFERENCES \"public\".\"movie\" (\"id\") ON DELETE CASCADE, CONSTRAINT \"Reviews_user_id_fkey\" FOREIGN KEY (\"user_id\") REFERENCES \"public\".\"user\" (\"id\") ON DELETE CASCADE)\nStep 5: CREATE INDEX \"Reviews_movieId_idx\" ON \"public\".\"Reviews\" (\"movie_id\")\nStep 6: CREATE INDEX \"Reviews_userId_idx\" ON \"public\".\"Reviews\" (\"user_id\")\nStep 7: CREATE TABLE \"public\".\"movie_metadata\" (\"id\" uuid NOT NULL DEFAULT uuid_generate_v4(), \"movie_id\" uuid NOT NULL, \"description\" text NULL, \"rating\" double precision NULL, \"release_year\" integer NULL, PRIMARY KEY (\"id\"), CONSTRAINT \"movie_metadata_movie_id_fkey\" FOREIGN KEY (\"movie_id\") REFERENCES \"public\".\"movie\" (\"id\") ON DELETE CASCADE)\nStep 8: CREATE INDEX \"movie_metadata_movieId_idx\" ON \"public\".\"movie_metadata\" (\"movie_id\")\nStep 9: CREATE UNIQUE INDEX \"movie_metadata_movieId_uidx\" ON \"public\".\"movie_metadata\" (\"movie_id\")\n"}}
+[debug] [2026-04-03T17:45:11.839Z] I0403 20:45:11.844733   21156 control.go:100] [projects/emulator/locations/emulator/services/gymlogger 3e45] UpdateResources(): done
+Main schema: sources: schema\schema.gql [1992B] 
+Connector "example": sources: example\mutations.gql [1243B] example\queries.gql [1801B] 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0403 20:45:11.844733   21156 control.go:100] [projects/emulator/locations/emulator/services/gymlogger 3e45] UpdateResources(): done\nMain schema: sources: schema\\schema.gql [1992B] \nConnector \"example\": sources: example\\mutations.gql [1243B] example\\queries.gql [1801B] \n"}}
+[debug] [2026-04-03T17:45:11.845Z] I0403 20:45:11.849700   21156 configure_emulator.go:21] ConfigureEmulator successed
+Request: service_id:  "gymlogger"
+connection_string:  "postgres://127.0.0.1:5432/fdcdb?sslmode=disable"
+database:  "fdcdb"
+
+Response: 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I0403 20:45:11.849700   21156 configure_emulator.go:21] ConfigureEmulator successed\nRequest: service_id:  \"gymlogger\"\nconnection_string:  \"postgres://127.0.0.1:5432/fdcdb?sslmode=disable\"\ndatabase:  \"fdcdb\"\n\nResponse: \n"}}
+[debug] [2026-04-03T17:45:11.849Z] <<< [apiv2][status] POST http://127.0.0.1:9399/emulator/configure 200
+[debug] [2026-04-03T17:45:11.849Z] <<< [apiv2][body] POST http://127.0.0.1:9399/emulator/configure {}
+[debug] [2026-04-03T17:45:11.849Z] [Data Connect] Successfully connected to postgres://127.0.0.1:5432/fdcdb?sslmode=disable}
+[warn] !  emulators: The Emulator UI is not starting because none of the running emulators have a UI component. {"metadata":{"emulator":{"name":"hub"},"message":"The Emulator UI is not starting because none of the running emulators have a UI component."}}
+[debug] [2026-04-03T17:45:11.854Z] >>> [apiv2][query] GET http://127.0.0.1:9399/emulator/info [none]
+[debug] [2026-04-03T17:45:11.859Z] <<< [apiv2][status] GET http://127.0.0.1:9399/emulator/info 200
+[debug] [2026-04-03T17:45:11.859Z] <<< [apiv2][body] GET http://127.0.0.1:9399/emulator/info {"version":"","services":[{"serviceId":"gymlogger","connectionString":"dbname='fdcdb' host='127.0.0.1' port='5432' sslmode='disable' dbname='fdcdb'"}]}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+└─────────────────────────────────────────────────────────────┘
+
+┌──────────────┬────────────────┐
+│ Emulator     │ Host:Port      │
+├──────────────┼────────────────┤
+│ Data Connect │ 127.0.0.1:9399 │
+└──────────────┴────────────────┘
+  Emulator Hub host: 127.0.0.1 port: 4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
