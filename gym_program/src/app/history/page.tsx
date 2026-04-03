@@ -21,11 +21,25 @@ export default function HistoryPage() {
         // Group by date
         const groups: Record<string, Workout[]> = {};
         data.forEach((w) => {
-          const dateStr = w.date.toDate().toLocaleDateString('en-US', {
+          if (!w.date) return;
+          
+          let dateObj: Date;
+          if (typeof w.date.toDate === 'function') {
+            dateObj = w.date.toDate();
+          } else if (w.date instanceof Date) {
+            dateObj = w.date;
+          } else {
+            dateObj = new Date(w.date as any);
+          }
+
+          if (isNaN(dateObj.getTime())) return;
+
+          const dateStr = dateObj.toLocaleDateString('en-US', {
             month: 'long',
             day: 'numeric',
             year: 'numeric'
           });
+          
           if (!groups[dateStr]) groups[dateStr] = [];
           groups[dateStr].push(w);
         });
